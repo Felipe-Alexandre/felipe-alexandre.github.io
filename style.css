@@ -1,0 +1,58 @@
+/* Importando uma fonte bonita do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap');
+
+body {
+    background-color: #fdf6f6; /* Um fundo rosa bem clarinho */
+    font-family: 'Roboto', sans-serif; /* Fonte padrão para os textos */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Pacifico', cursive; /* Fonte especial para o título principal */
+    color: #e91e63; /* Cor rosa choque */
+    font-size: 3em; /* Tamanho da fonte */
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto; /* Centraliza o conteúdo principal */
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.galeria {
+    margin-top: 30px;
+    display: flex; /* Coloca as imagens lado a lado */
+    flex-wrap: wrap; /* Permite que as imagens quebrem a linha */
+    justify-content: center; /* Centraliza as imagens */
+    gap: 15px; /* Espaço entre as fotos */
+}
+
+.galeria img {
+    max-width: 100%; /* Garante que a imagem não saia da tela */
+    width: 250px; /* Tamanho fixo para as imagens */
+    height: 250px;
+    object-fit: cover; /* Faz a imagem cobrir o espaço sem distorcer */
+    border-radius: 8px; /* Bordas arredondadas */
+    border: 3px solid #fce4ec;
+    transition: transform 0.3s ease; /* Efeito de transição suave */
+}
+
+.galeria img:hover {
+    transform: scale(1.05); /* Aumenta um pouco a imagem ao passar o mouse */
+}
+
+.mensagem-final {
+    margin-top: 40px;
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #777;
+}
