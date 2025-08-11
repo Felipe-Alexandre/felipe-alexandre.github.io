@@ -104,3 +104,28 @@ footer {
 .foto-container:hover .legenda {
   opacity: 1; /* Torna a legenda visível quando o mouse passa sobre o container */
 }
+
+/* --- PLAYER DE SPOTIFY FLUTUANTE --- */
+
+/* Por padrão, em telas pequenas (mobile), o player fica escondido */
+#spotify-flutuante {
+  display: none;
+}
+
+/* A MÁGICA: Regra para telas com 900px de largura ou mais (desktops) */
+@media (min-width: 900px) {
+  
+  #spotify-flutuante {
+    display: block; /* Faz o player aparecer */
+    position: fixed; /* Fixa o player na tela, ele não rola com a página */
+    
+    /* Posição */
+    bottom: 20px; /* 20 pixels de distância do fundo da tela */
+    right: 20px;  /* 20 pixels de distância da direita da tela */
+    
+    /* Estilo e Camada */
+    z-index: 1000; /* Garante que ele fique por cima de todo o conteúdo */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+  }
+
+}
