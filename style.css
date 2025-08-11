@@ -56,3 +56,51 @@ footer {
     font-size: 0.9em;
     color: #777;
 }
+
+/* --- EFEITO DE LEGENDA NA FOTO --- */
+
+/* 1. O container que agrupa a foto e a legenda */
+.foto-container {
+  position: relative; /* Essencial para posicionar a legenda sobre a imagem */
+  width: 250px; /* Mesma largura da sua imagem */
+  height: 250px; /* Mesma altura da sua imagem */
+  display: inline-block; /* Garante que fique alinhado corretamente na galeria */
+}
+
+/* Garante que a imagem dentro do container ocupe todo o espaço */
+.foto-container img {
+  display: block; /* Remove pequenos espaços em branco abaixo da imagem */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mantém a proporção da imagem sem distorcer */
+}
+
+/* 2. A legenda em si (escondida por padrão) */
+.legenda {
+  position: absolute; /* "Flutua" sobre a imagem, dentro do container */
+  bottom: 0;
+  left: 0;
+  
+  width: 100%;
+  height: 100%; /* Faz a legenda cobrir a foto inteira */
+  
+  background-color: rgba(0, 0, 0, 0.7); /* Fundo preto com 70% de transparência */
+  color: white; /* Texto branco para fácil leitura */
+  
+  /* Centraliza o texto da legenda na caixa */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box; /* Garante que o padding não aumente o tamanho da caixa */
+
+  /* A MÁGICA COMEÇA AQUI */
+  opacity: 0; /* Deixa a legenda totalmente invisível por padrão */
+  transition: opacity 0.4s ease; /* Cria uma transição suave de 0.4 segundos */
+}
+
+/* 3. A ação de passar o mouse (hover) */
+.foto-container:hover .legenda {
+  opacity: 1; /* Torna a legenda visível quando o mouse passa sobre o container */
+}
