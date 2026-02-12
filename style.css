@@ -139,3 +139,65 @@ nav a {
   transform: scale(1.03);
   border-color: #58a6ff;
 }
+
+.card h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: #f0f6fc;
+}
+
+.metrics-grid {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.metric {
+  text-align: center;
+}
+
+.metric-number {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #58a6ff;
+}
+
+.metric-label {
+  font-size: 0.9rem;
+  color: #c9d1d9;
+}
+
+.light-mode {
+  background: #f8f9fb;
+  color: #1a1a1a;
+}
+
+.light-mode h1,
+.light-mode h2 {
+  color: #111;
+}
+
+.light-mode .card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+}
+
+.light-mode .metric-label {
+  color: #444;
+}
+
+.light-mode nav a {
+  color: #2563eb;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
