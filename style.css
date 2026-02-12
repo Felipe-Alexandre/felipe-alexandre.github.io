@@ -115,3 +115,27 @@ nav a {
   font-weight: 600;
   color: #58a6ff;
 }
+
+.header-grid {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.profile-wrapper {
+  flex-shrink: 0;
+}
+
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #30363d;
+  transition: 0.3s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.03);
+  border-color: #58a6ff;
+}
