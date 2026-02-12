@@ -213,3 +213,54 @@ nav a {
   letter-spacing: 0.3px;
   border: 1px solid #2ea043;
 }
+
+#about {
+  margin-bottom: 40px;
+}
+
+#metrics {
+  margin-top: 0;
+}
+
+/* ========== LIGHT MODE OVERRIDES ========== */
+
+.light-mode {
+  background: #f8f9fb;
+  color: #1a1a1a;
+}
+
+.light-mode h1,
+.light-mode h2,
+.light-mode h3 {
+  color: #111111;
+}
+
+.light-mode .subtitle {
+  color: #444444;
+}
+
+.light-mode p {
+  color: #333333;
+}
+
+.light-mode .metric-label {
+  color: #555555;
+}
+
+.light-mode nav a {
+  color: #2563eb;
+}
+
+.light-mode .card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  color: #222222;
+}
+
+.light-mode a {
+  color: #1d4ed8;
+}
+
+.light-mode a:hover {
+  color: #1e40af;
+}
