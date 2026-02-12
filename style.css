@@ -1,142 +1,44 @@
-/* Importando uma fonte bonita do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap');
-
 body {
-    background-color: #fdf6f6; /* Um fundo rosa bem clarinho */
-    font-family: 'Roboto', sans-serif; /* Fonte padrão para os textos */
-    color: #333;
-    margin: 0;
-    padding: 20px;
-    text-align: center;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  max-width: 900px;
+  margin: auto;
+  padding: 40px;
+  line-height: 1.6;
+  color: #222;
 }
 
-header h1 {
-    font-family: 'Bodoni', cursive; /* Fonte especial para o título principal */
-    color: #ea1919; /* Cor rosa choque */
-    font-size: 3em; /* Tamanho da fonte */
+header {
+  text-align: center;
+  margin-bottom: 50px;
 }
 
-main {
-    max-width: 800px;
-    margin: 20px auto; /* Centraliza o conteúdo principal */
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+.subtitle {
+  font-size: 1.2em;
+  color: #555;
 }
 
-.galeria {
-    margin-top: 30px;
-    display: flex; /* Coloca as imagens lado a lado */
-    flex-wrap: wrap; /* Permite que as imagens quebrem a linha */
-    justify-content: center; /* Centraliza as imagens */
-    gap: 15px; /* Espaço entre as fotos */
+h2 {
+  margin-top: 40px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
 }
 
-.galeria img {
-    max-width: 100%; /* Garante que a imagem não saia da tela */
-    width: 250px; /* Tamanho fixo para as imagens */
-    height: 250px;
-    object-fit: cover; /* Faz a imagem cobrir o espaço sem distorcer */
-    border-radius: 8px; /* Bordas arredondadas */
-    border: 3px solid #fce4ec;
-    transition: transform 0.3s ease; /* Efeito de transição suave */
+ul {
+  margin-left: 20px;
 }
 
-.galeria img:hover {
-    transform: scale(1.05); /* Aumenta um pouco a imagem ao passar o mouse */
+a {
+  color: #0066cc;
+  text-decoration: none;
 }
 
-.mensagem-final {
-    margin-top: 40px;
+a:hover {
+  text-decoration: underline;
 }
 
 footer {
-    margin-top: 30px;
-    font-size: 0.9em;
-    color: #777;
-}
-
-/* --- EFEITO DE LEGENDA NA FOTO --- */
-
-/* 1. O container que agrupa a foto e a legenda */
-.foto-container {
-  position: relative; /* Essencial para posicionar a legenda sobre a imagem */
-  width: 250px; /* Mesma largura da sua imagem */
-  height: 250px; /* Mesma altura da sua imagem */
-  display: inline-block; /* Garante que fique alinhado corretamente na galeria */
-}
-
-/* Garante que a imagem dentro do container ocupe todo o espaço */
-.foto-container img {
-  display: block; /* Remove pequenos espaços em branco abaixo da imagem */
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Mantém a proporção da imagem sem distorcer */
-}
-
-/* 2. A legenda em si (escondida por padrão) */
-.legenda {
-  position: absolute; /* "Flutua" sobre a imagem, dentro do container */
-  bottom: 0;
-  left: 0;
-  
-  width: 100%;
-  height: 100%; /* Faz a legenda cobrir a foto inteira */
-  
-  background-color: rgba(0, 0, 0, 0.7); /* Fundo preto com 70% de transparência */
-  color: white; /* Texto branco para fácil leitura */
-  
-  /* Centraliza o texto da legenda na caixa */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-top: 60px;
   text-align: center;
-  padding: 10px;
-  box-sizing: border-box; /* Garante que o padding não aumente o tamanho da caixa */
-
-  /* A MÁGICA COMEÇA AQUI */
-  opacity: 0; /* Deixa a legenda totalmente invisível por padrão */
-  transition: opacity 0.4s ease; /* Cria uma transição suave de 0.4 segundos */
-}
-
-/* 3. A ação de passar o mouse (hover) */
-.foto-container:hover .legenda {
-  opacity: 1; /* Torna a legenda visível quando o mouse passa sobre o container */
-}
-
-/* --- CONTROLE DOS PLAYERS DE SPOTIFY --- */
-
-/* ESTILOS PADRÃO (MOBILE FIRST) */
-
-/* O player flutuante do desktop começa escondido. */
-#spotify-flutuante {
-  display: none;
-}
-
-/* O player do mobile começa visível e estilizado. */
-.spotify-mobile {
-  display: block;
-  margin-top: 25px; /* Adiciona um espaço para não colar no texto de cima */
-}
-
-
-/* REGRAS PARA TELAS GRANDES (DESKTOP) A PARTIR DE 900px */
-@media (min-width: 900px) {
-  
-  /* O player flutuante do desktop AGORA APARECE. */
-  #spotify-flutuante {
-    display: block;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;  
-    z-index: 1000;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  }
-
-  /* E o player do mobile AGORA SOME. */
-  .spotify-mobile {
-    display: none;
-  }
-
+  font-size: 0.9em;
+  color: #777;
 }
