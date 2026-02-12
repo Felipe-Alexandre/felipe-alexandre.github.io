@@ -60,19 +60,19 @@
   <h2>Impact Metrics</h2>
   <div class="metrics-grid">
     <div class="metric">
-      <div class="metric-number" data-target="5000">0</div>
+      <div class="metric-number" data-target="5000" data-plus="true">0</div>
       <div class="metric-label">Metagenomes Processed</div>
     </div>
     <div class="metric">
-      <div class="metric-number" data-target="9">0</div>
+      <div class="metric-number" data-target="9" data-plus="true">0</div>
       <div class="metric-label">TB of Data Analyzed</div>
     </div>
     <div class="metric">
-      <div class="metric-number" data-target="5">0</div>
+      <div class="metric-number" data-target="5" data-plus="false">0</div>
       <div class="metric-label">Antarctic Missions</div>
     </div>
     <div class="metric">
-      <div class="metric-number" data-target="4">0</div>
+      <div class="metric-number" data-target="4" data-plus="false">0</div>
       <div class="metric-label">Peer-Reviewed Publications</div>
     </div>
   </div>
@@ -249,7 +249,11 @@ const counterObserver = new IntersectionObserver(entries => {
         if (progress < duration) {
           requestAnimationFrame(animate);
         } else {
-          counter.innerText = target + "+";
+          if (counter.dataset.plus === "true") {
+  counter.innerText = target + "+";
+} else {
+  counter.innerText = target;
+}
         }
       }
 
