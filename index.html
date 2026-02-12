@@ -1,139 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="icon" type="image/svg+xml" href="favicon.svg">  
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Felipe A. S. Barbosa | Applied Data Scientist</title>
 
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
-<style>
-body {
-  margin: 0;
-  background: #0e1116;
-  color: #e6edf3;
-  font-family: 'IBM Plex Sans', sans-serif;
-  line-height: 1.7;
-}
-
-.container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 80px 30px;
-}
-
-h1, h2 {
-  font-family: 'IBM Plex Serif', serif;
-  color: #ffffff;
-}
-
-h1 { font-size: 2.5rem; margin-bottom: 10px; }
-
-.subtitle { color: #c9d1d9; margin-bottom: 20px; }
-
-.badge {
-  display: inline-block;
-  background: #238636;
-  color: white;
-  padding: 6px 12px;
-  font-size: 0.8rem;
-  border-radius: 20px;
-  margin-bottom: 15px;
-}
-
-section { margin-bottom: 80px; }
-
-h2 {
-  font-size: 1.4rem;
-  border-bottom: 1px solid #30363d;
-  padding-bottom: 10px;
-  margin-bottom: 25px;
-}
-
-a { color: #58a6ff; text-decoration: none; transition: 0.3s; }
-a:hover { color: #1f6feb; }
-
-.cv-button {
-  display: inline-block;
-  background: #1f6feb;
-  color: white;
-  padding: 10px 18px;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  transition: 0.3s;
-  margin-top: 10px;
-}
-
-.cv-button:hover { background: #58a6ff; }
-
-.header-grid {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  margin-bottom: 80px;
-}
-
-.profile-pic {
-  width: 170px;
-  height: 170px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #30363d;
-  transition: 0.3s;
-}
-
-.profile-pic:hover {
-  border-color: #58a6ff;
-  transform: scale(1.03);
-}
-
-.card {
-  background: #161b22;
-  padding: 25px;
-  border-radius: 6px;
-  border: 1px solid #30363d;
-  margin-bottom: 20px;
-  transition: 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  border-color: #58a6ff;
-}
-
-nav {
-  position: fixed;
-  top: 20px;
-  right: 40px;
-}
-
-nav a { margin-left: 20px; font-size: 0.9rem; }
-</style>
 </head>
-
-
-<script>
-const counters = document.querySelectorAll('.metric-number');
-
-counters.forEach(counter => {
-  const updateCount = () => {
-    const target = +counter.getAttribute('data-target');
-    const count = +counter.innerText;
-    const increment = target / 100;
-
-    if (count < target) {
-      counter.innerText = Math.ceil(count + increment);
-      setTimeout(updateCount, 20);
-    } else {
-      counter.innerText = target + "+";
-    }
-  };
-
-  updateCount();
-});
-</script>
-
 
 <body>
 
@@ -146,9 +22,8 @@ counters.forEach(counter => {
   <a href="#antarctica">Antarctica</a>
   <a href="#contact">Contact</a>
   <button id="theme-toggle" style="margin-left:20px; background:none; border:none; color:#58a6ff; cursor:pointer; font-size:1rem;">
-  ☀️
-</button>
-
+    ☀️
+  </button>
 </nav>
 
 <div class="container">
@@ -161,14 +36,12 @@ counters.forEach(counter => {
     <h1>Felipe A. S. Barbosa</h1>
     <p class="subtitle">
       Applied Data Scientist | Bioinformatics | Machine Learning
-      <p style="font-size:0.85rem; color:#8b949e; margin-top:-10px;">
-  Based in Brazil · Open to remote collaborations
-</p>
-
+    </p>
+    <p style="font-size:0.85rem; color:#8b949e; margin-top:-10px;">
+      Based in Brazil · Open to remote collaborations
     </p>
 
     <div class="badge">Open to Research & Technical Collaborations</div>
-
     <br>
     <a href="CV.pdf" download class="cv-button">Download CV</a>
   </div>
@@ -178,184 +51,37 @@ counters.forEach(counter => {
   <h2>About</h2>
   <p>
     Applied scientist working at the intersection of computational biology,
-    large-scale metagenomic analysis and machine learning. I design and implement
-    reproducible pipelines that transform complex biological systems into
-    structured, interpretable and actionable data.
+    large-scale metagenomic analysis and machine learning.
   </p>
 </section>
 
 <section id="metrics" class="fade-in">
   <h2>Impact Metrics</h2>
-
   <div class="metrics-grid">
-
     <div class="metric">
       <div class="metric-number" data-target="5000">0</div>
       <div class="metric-label">Metagenomes Processed</div>
     </div>
-
     <div class="metric">
       <div class="metric-number" data-target="9">0</div>
       <div class="metric-label">TB of Data Analyzed</div>
     </div>
-
     <div class="metric">
       <div class="metric-number" data-target="5">0</div>
       <div class="metric-label">Antarctic Missions</div>
     </div>
-
     <div class="metric">
       <div class="metric-number" data-target="4">0</div>
       <div class="metric-label">Peer-Reviewed Publications</div>
     </div>
-
   </div>
-</section>
-
-
-<section id="experience" class="fade-in">
-  <h2>Professional Experience</h2>
-
-  <div class="card">
-    <h3>Research Associate — Bioinformatics & Data Science</h3>
-    <p><strong>Meirelles Lab | Federal University of Bahia (2019 – 2025)</strong></p>
-    <p>
-      Designed and maintained end-to-end bioinformatics pipelines, from raw sequence retrieval
-      (NCBI/MG-RAST) to statistical modeling and ecological interpretation.
-      Processed TB-scale datasets and developed custom taxonomic databases.
-    </p>
-    <p><strong>Main Projects:</strong></p>
-    <ul>
-      <li>Global CPR & DPANN ecological analysis</li>
-      <li>Aquifer metagenomic ecosystem modeling</li>
-      <li>Public metagenomic database curation</li>
-    </ul>
-  </div>
-
-</section>
-
-<section id="education" class="fade-in">
-  <h2>Education</h2>
-
-  <div class="card">
-    <h3>M.Sc. in Microbiology (2022 – 2024)</h3>
-    <p>Federal University of Bahia (UFBA)</p>
-    <p>
-      Focus: Climate change impacts on microbial trophic interactions and
-      ecosystem-level metagenomic modeling.
-    </p>
-  </div>
-
-  <div class="card">
-    <h3>B.Sc. in Biological Sciences (2017 – 2022)</h3>
-    <p>Federal University of Bahia (UFBA)</p>
-    <p>
-      Focus: Microbial ecology in aquifers and computational data analysis
-      within the Meirelles Lab.
-    </p>
-  </div>
-
-</section>
-
-<section id="skills" class="fade-in">
-  <h2>Technical Skills</h2>
-  <div class="card">
-    <p><strong>Programming:</strong> R (advanced), Bash (advanced), Python (intermediate)</p>
-    <p><strong>Machine Learning:</strong> Random Forest, PCA, CCA, multivariate statistics</p>
-    <p><strong>Bioinformatics:</strong> Metagenomics, taxonomic classification, custom reference databases</p>
-    <p><strong>Data Engineering:</strong> ETL pipelines, workflow automation, HPC environments</p>
-  </div>
-</section>
-
-<section id="publications" class="fade-in">
-  <h2>Peer-Reviewed Publications</h2>
-
-  <div class="card">
-    <h3>Rare Phyla, Such as CPR and DPANN, Shape Ecosystem-Level Microbial Community Structure Dissimilarities</h3>
-    <p><em>Microbial Ecology, 2025</em></p>
-    <p>
-      <a href="https://doi.org/10.1007/s00248-025-02595-0" target="_blank">
-        View Publication (DOI)
-      </a>
-      ·
-      <a href="https://github.com/MeirellesLab/CPR_and_DPANN_global_overview_paper" target="_blank">
-        GitHub Repository
-      </a>
-    </p>
-  </div>
-
-  <div class="card">
-    <h3>Ecological Landscape Explains Aquifers Microbial Structure</h3>
-    <p><em>Science of the Total Environment, 2023</em></p>
-    <p>
-      <a href="https://doi.org/10.1016/j.scitotenv.2022.160822" target="_blank">
-        View Publication (DOI)
-      </a>
-      ·
-      <a href="https://github.com/MeirellesLab/aquifer_metagenomes" target="_blank">
-        GitHub Repository
-      </a>
-    </p>
-  </div>
-
-  <div class="card">
-    <h3>Integrating Computational Methods to Investigate the Macroecology of Microbiomes</h3>
-    <p><em>Frontiers in Genetics, 2020</em></p>
-    <p>
-      <a href="https://doi.org/10.3389/fgene.2019.01344" target="_blank">
-        View Publication (DOI)
-      </a>
-      ·
-      <a href="https://github.com/MeirellesLab/metagenomic_public_database" target="_blank">
-        GitHub Repository
-      </a>
-    </p>
-  </div>
-
-  <div class="card">
-    <h3>Mangrove Microbiome Study</h3>
-    <p><em>Science of the Total Environment, 2023</em></p>
-    <p>
-      <a href="https://doi.org/10.1016/j.scitotenv.2022.158863" target="_blank">
-        View Publication (DOI)
-      </a>
-      ·
-      <a href="https://github.com/MeirellesLab/Loiola_et_al_Mangrove_Sediments_Microbiomes" target="_blank">
-        GitHub Repository
-      </a>
-    </p>
-  </div>
-
-</section>
-
-
-<section id="antarctica" class="fade-in">
-  <h2>Antarctic Scientific Expeditions</h2>
-
-  <div class="card">
-    <h3>Brazilian Antarctic Program (OPERANTAR XXXVIII, XLI, XLII, XLIII)</h3>
-    <p>
-      Multiple scientific missions aboard NPo "Almirante Maximiano"
-      contributing to environmental sampling and metagenomic research in polar ecosystems.
-    </p>
-  </div>
-
-  <div class="card">
-    <h3>International Antarctic Coastal Expedition (2024–2025)</h3>
-    <p>
-      69-day international expedition abroad the RV Akademik Tryoshnikov focused on climate-related ecosystem monitoring
-      and coastal circumnavigation research.
-    </p>
-  </div>
-
 </section>
 
 <section id="contact" class="fade-in">
-  <section id="contact">
   <h2>Contact</h2>
   <p>Email: felipe.as.barbosa99@gmail.com</p>
   <p>
-    GitHub: 
+    GitHub:
     <a href="https://github.com/Felipe-Alexandre" target="_blank">
       github.com/Felipe-Alexandre
     </a>
@@ -371,54 +97,81 @@ counters.forEach(counter => {
 </div>
 
 <script>
-document.querySelectorAll('nav a').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
+document.addEventListener("DOMContentLoaded", function () {
+
+  // Smooth scroll
+  document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
     });
   });
-});
-const toggleButton = document.getElementById('theme-toggle');
-const body = document.body;
 
-// Check saved preference
-if (localStorage.getItem("theme") === "light") {
-  body.classList.add("light-mode");
-  toggleButton.textContent = "🌙";
-}
+  // Theme toggle
+  const toggleButton = document.getElementById('theme-toggle');
+  const body = document.body;
 
-toggleButton.addEventListener("click", () => {
-  body.classList.toggle("light-mode");
-
-  if (body.classList.contains("light-mode")) {
-    localStorage.setItem("theme", "light");
+  if (localStorage.getItem("theme") === "light") {
+    body.classList.add("light-mode");
     toggleButton.textContent = "🌙";
-  } else {
-    localStorage.setItem("theme", "dark");
-    toggleButton.textContent = "☀️";
   }
-});
 
-const faders = document.querySelectorAll('.fade-in');
+  toggleButton.addEventListener("click", () => {
+    body.classList.toggle("light-mode");
 
-const appearOptions = {
-  threshold: 0.15
-};
-
-const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) {
-      return;
+    if (body.classList.contains("light-mode")) {
+      localStorage.setItem("theme", "light");
+      toggleButton.textContent = "🌙";
     } else {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
+      localStorage.setItem("theme", "dark");
+      toggleButton.textContent = "☀️";
     }
   });
-}, appearOptions);
 
-faders.forEach(fader => {
-  appearOnScroll.observe(fader);
+  // Fade-in observer
+  const faders = document.querySelectorAll('.fade-in');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  faders.forEach(fader => observer.observe(fader));
+
+  // Metrics animation (only when visible)
+  const counters = document.querySelectorAll('.metric-number');
+
+  const counterObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const counter = entry.target;
+        const target = +counter.getAttribute('data-target');
+        let count = 0;
+        const increment = target / 100;
+
+        const updateCount = () => {
+          if (count < target) {
+            count += increment;
+            counter.innerText = Math.ceil(count);
+            requestAnimationFrame(updateCount);
+          } else {
+            counter.innerText = target + "+";
+          }
+        };
+
+        updateCount();
+        counterObserver.unobserve(counter);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  counters.forEach(counter => counterObserver.observe(counter));
+
 });
 </script>
 
