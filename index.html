@@ -4,74 +4,86 @@
   <meta charset="UTF-8">
   <title>Felipe Barbosa | Applied Data Scientist</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 
 <body class="modern">
 
-<header>
-  <img src="assets/profile.jpg" alt="Felipe Barbosa" class="profile-pic">
-  <h1>Felipe Alexandre Santana Barbosa</h1>
-  <p class="subtitle">Applied Data Scientist | Bioinformatics & Machine Learning</p>
+<nav>
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#publications">Publications</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+
+<header class="fade">
+  <h1>Felipe A. S. Barbosa</h1>
+  <p class="subtitle">Applied Data Scientist | Bioinformatics | Machine Learning</p>
+  <button class="cv-button" onclick="window.open('CV.pdf')">Download CV</button>
 </header>
 
-
-<header>
-  <h1>Felipe Alexandre Santana Barbosa</h1>
-  <p class="subtitle">Applied Data Scientist | Bioinformatics & Machine Learning</p>
-</header>
-
-<section>
+<section id="about" class="fade">
   <h2>About</h2>
   <p>
-    Applied data scientist with experience in large-scale biological and environmental data analysis.
-    I build reproducible pipelines, transform complex datasets into structured information,
-    and apply statistical modeling and machine learning to generate actionable insights.
+    Applied scientist working at the intersection of computational biology,
+    large-scale data analysis, and machine learning. I build reproducible
+    pipelines and transform complex biological systems into structured,
+    interpretable data.
   </p>
 </section>
 
-<section>
-  <h2>Skills</h2>
-  <ul>
-    <li><strong>Programming:</strong> R (advanced), Bash (advanced), Python (intermediate)</li>
-    <li><strong>Data & ML:</strong> Random Forest, PCA, CCA, multivariate statistics</li>
-    <li><strong>Data Engineering:</strong> ETL workflows, automation, reproducibility</li>
-    <li><strong>Bioinformatics:</strong> Metagenomics, taxonomic classification</li>
-  </ul>
+<section id="projects">
+  <h2>Selected Projects</h2>
+
+  <div class="card">
+    <h3>Metagenomic Public Database</h3>
+    <p>Large-scale curation and automation of public metagenomic datasets.</p>
+  </div>
+
+  <div class="card">
+    <h3>Rare Phyla Ecological Analysis</h3>
+    <p>End-to-end computational pipeline supporting ecosystem-level modeling.</p>
+  </div>
+
 </section>
 
-<section>
-  <h2>Experience</h2>
-  <p><strong>Research Associate – Bioinformatics & Data Science</strong><br>
-  Federal University of Bahia | 2019 – Present</p>
-  <ul>
-    <li>Designed end-to-end pipelines from raw sequencing data to statistical modeling</li>
-    <li>Processed TB-scale metagenomic datasets</li>
-    <li>Built custom taxonomic databases and reproducible workflows</li>
-  </ul>
+<section id="publications">
+  <h2>Publications</h2>
+  <canvas id="pubChart" width="400" height="200"></canvas>
+  <div class="counter">3+</div>
 </section>
 
-<section>
-  <h2>Selected Publications</h2>
-  <ul>
-    <li><strong>Rare Phyla Shape Ecosystem-Level Structure</strong> – <strong class="highlight">Microbial Ecology (2025)</strong></li>
-    <li><strong>Ecological Landscape Explains Aquifer Microbial Structure</strong> – STOTEN (2023)</li>
-    <li><strong>Integrating Computational Methods in Macroecology</strong> – Frontiers in Genetics (2020)</li>
-  </ul>
-</section>
-
-<section>
+<section id="contact">
   <h2>Contact</h2>
-  <p>
-    Email: <a href="mailto:felipe.as.barbosa99@gmail.com">felipe.as.barbosa99@gmail.com</a><br>
-    GitHub: <a href="https://github.com/SEU-USUARIO">github.com/SEU-USUARIO</a>
-  </p>
+  <p>Email: felipe.as.barbosa99@gmail.com</p>
 </section>
 
-<footer>
-  <p>© 2026 Felipe Barbosa</p>
-</footer>
+</div>
+
+<script>
+const ctx = document.getElementById('pubChart');
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['2020', '2023', '2025'],
+    datasets: [{
+      label: 'Publications',
+      data: [1, 2, 1],
+      backgroundColor: '#58a6ff'
+    }]
+  },
+  options: {
+    plugins: { legend: { display: false }},
+    scales: {
+      y: { beginAtZero: true }
+    }
+  }
+});
+</script>
 
 </body>
 </html>
